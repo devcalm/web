@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -295,20 +295,95 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
-.btn:hover,
-.btn:active {
+.btn:hover {
     cursor: pointer;
     color: #FAFAFA;
+    fill: #FAFAFA;
 }
 
 .left_sidebar__download-btn-svg {
-    padding: 12px;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNCAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzNfMzMyKSI+CjxwYXRoIGQ9Ik0yLjMzMzQxIDEyLjk1MjNIMTEuNjY2N1Y4LjI4NTY0SDEyLjgzMzRWMTMuNjE5QzEyLjgzMzQgMTMuNzk1OCAxMi43NzIgMTMuOTY1NCAxMi42NjI2IDE0LjA5MDRDMTIuNTUzMiAxNC4yMTU0IDEyLjQwNDggMTQuMjg1NiAxMi4yNTAxIDE0LjI4NTZIMS43NTAwOEMxLjU5NTM3IDE0LjI4NTYgMS40NDcgMTQuMjE1NCAxLjMzNzYgMTQuMDkwNEMxLjIyODIxIDEzLjk2NTQgMS4xNjY3NSAxMy43OTU4IDEuMTY2NzUgMTMuNjE5VjguMjg1NjRIMi4zMzM0MVYxMi45NTIzWk04LjE2Njc1IDYuMjg1NjRIMTEuMDgzNEw3LjAwMDA4IDEwLjk1MjNMMi45MTY3NSA2LjI4NTY0SDUuODMzNDJWMi4yODU2NEg4LjE2Njc1VjYuMjg1NjRaIiBmaWxsPSIjMkIyQjJCIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfM18zMzIiPgo8cmVjdCB3aWR0aD0iMTQiIGhlaWdodD0iMTYiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuMjg1NjQ1KSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=');
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
 }
 
-.left_sidebar__download-btn-svg:hover {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNCAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzNfMzAwKSI+CjxwYXRoIGQ9Ik0yLjMzMzQxIDEyLjk1MjNIMTEuNjY2N1Y4LjI4NTY0SDEyLjgzMzRWMTMuNjE5QzEyLjgzMzQgMTMuNzk1OCAxMi43NzIgMTMuOTY1NCAxMi42NjI2IDE0LjA5MDRDMTIuNTUzMiAxNC4yMTU0IDEyLjQwNDggMTQuMjg1NiAxMi4yNTAxIDE0LjI4NTZIMS43NTAwOEMxLjU5NTM3IDE0LjI4NTYgMS40NDcgMTQuMjE1NCAxLjMzNzYgMTQuMDkwNEMxLjIyODIxIDEzLjk2NTQgMS4xNjY3NSAxMy43OTU4IDEuMTY2NzUgMTMuNjE5VjguMjg1NjRIMi4zMzM0MVYxMi45NTIzWk04LjE2Njc1IDYuMjg1NjRIMTEuMDgzNEw3LjAwMDA4IDEwLjk1MjNMMi45MTY3NSA2LjI4NTY0SDUuODMzNDJWMi4yODU2NEg4LjE2Njc1VjYuMjg1NjRaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzNfMzAwIj4KPHJlY3Qgd2lkdGg9IjE0IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjI4NTY0NSkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K")
+.main__services {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__services-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__services-description p {
+    margin-top: 1rem;
+    color: #767676;
+    max-width: 27.575rem;
+    text-align: center;
+}
+
+.main__services-list {
+    margin-top: 1rem;
+    max-width: 60.625rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main__services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 19.375rem;
+    height: 14rem;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0 1.25rem;
+}
+
+.main__services-item a {
+   text-decoration: none;
+   color: #000;
+
+}
+.main__services-item p {
+    color: #767676;
+}
+.main__services-item h3 {
+    font-weight: 400;
+}
+
+.main__services-item-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main__services-item-order p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: small;
+    color: #FFB400;
+}
+
+.main__price_plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.main__price_plans > p {
+    max-width: 26.75rem;
+    color: #767676;
+    text-align: center;
 }
