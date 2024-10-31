@@ -632,3 +632,241 @@ h1 {
     justify-content: space-between;
     align-items: center;
 }
+
+.main__portfolio {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__portfolio-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 27.375rem;
+    text-align: center;
+}
+
+.main__portfolio-categories {
+    margin-top: 2rem;
+    display: flex;
+    width: 37.5rem;
+    justify-content: space-evenly;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.main__portfolio-categories .active {
+    color: #FFB400;
+}
+
+.main__portfolio-list {
+    margin-top: 2rem;
+    width: 60.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main__portfolio-item {
+    width: 19.375rem;
+    height: 18.75rem;
+    overflow: hidden;
+}
+
+.main__portfolio-item img {
+    width: 20.375rem;
+    height: 19.75rem;
+    transition: transform 0.4s ease;
+}
+
+.main__portfolio-item:hover img {
+    transform: scale(1.2); 
+    transform-origin: center; 
+    cursor: crosshair;
+}
+
+.main__blog {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__blog-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 27.375rem;
+    text-align: center;
+}
+
+.main__blog-list {
+    margin-top: 2rem;
+    width: 60.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main__blog-item {
+    width: 19.375rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+.main__blog-item h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.main__blog-item-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 9rem;
+    justify-content: space-between;
+}
+
+.main__blog-item-container > p {
+    font-size: 0.95rem;
+}
+
+.main__blog-item img {
+    width: 20.375rem;
+    height: 19.75rem;
+}
+
+.main__blog-item-container-link {
+    display: flex;
+    text-decoration: none;
+    color: #FFB400;
+    font-weight: 500;
+    align-items: center;
+}
+
+.main__blog-item-image {
+    position: relative;
+}
+
+.main__blog-item-image > .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color:  rgb(255, 180, 0, 0.8);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.main__blog-item:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.main__contacts {
+    display: flex;
+    width: 60.625rem;
+    justify-content: space-between;
+}
+
+.main__contacts-form {
+    display: flex;
+    flex-direction: column;
+    width: 35.625rem;
+    background-color: #FAFAFA;
+    padding: 1rem;
+}
+
+.main__contacts-form-element {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.main__contacts-form-element input {
+    margin-top: 0.3rem;
+    height: 2.5rem;
+    background-color: #F0F0F6;
+    border: none;
+    font-size: large;
+}
+
+.main__contacts-form-element textarea {
+    margin-top: 0.3rem;
+    height: 8rem;
+    resize: none;
+    background-color: #F0F0F6;
+    border: none;
+    font-size: large;
+}
+
+.main__contacts-form-element label {
+    font-size: 0.9rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid rgb(118, 118, 118, 0.2) /* Custom outline color */
+}
+
+.main__contacts-form-element.submit {
+    display: flex;
+    width: 10rem;
+}
+
+.main__contacts-form-element.submit > button {
+    padding: 0.5rem;
+    background-color: #FFB400;
+    border: none;
+}
+
+.main__contacts-address {
+    display: flex;
+    flex-direction: column;
+    width: 23.125rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin-bottom: 1rem;
+} 
+
+.main__contacts-address-icon {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #FFB400;
+    border-radius: 50%;
+}
+
+.main__contacts-address-info {
+    display: flex;
+    flex-direction: column;
+    width: 23.125rem;
+}
+
+.main__contacts-adress-description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.725rem;
+}
+.main__contacts-address-info-value {
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
