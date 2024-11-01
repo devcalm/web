@@ -121,6 +121,10 @@ h1 {
     align-items: center;
     gap: 5px;
 }
+.hire-me-btn-svg {
+    display: flex;
+    align-items: center;
+}
 
 .right_sidebar {
     display: flex;
@@ -131,15 +135,47 @@ h1 {
     background-color: #FAFAFA;
 }
 
+.tooltip {
+    position: relative;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 4.5rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 95%;
+    left: 50%;
+    margin-left: -36px;
+    font-size: small;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .tooltip:hover {
+    cursor: pointer;
+  }
+
 .right_sidebar__navigation-home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1rem;
-}
-
-.right_sidebar__navigation-home svg:nth-child(2) {
-    margin-top: 0.5rem;
 }
 
 .right_sidebar__navigation {
@@ -149,7 +185,7 @@ h1 {
     margin-top: 9rem;
 }
 
-.right_sidebar__navigation>svg {
+.right_sidebar__navigation svg {
     margin: 1rem 0;
 }
 
@@ -473,6 +509,10 @@ h1 {
     font-size: 0.875rem;
     font-weight: 600;
     box-shadow: 0px 0px 10px 1px rgba(224, 216, 216)
+}
+
+.main__price_plans-order-now-btn:hover {
+    cursor: pointer;
 }
 
 .main__price_plans-order-now-btn.active {
@@ -817,6 +857,11 @@ textarea:focus {
     outline: 1px solid rgb(118, 118, 118, 0.2) /* Custom outline color */
 }
 
+.main__contacts-form-container h2,
+.main__contacts-info-container h2 {
+    margin: 2rem 0;
+}
+
 .main__contacts-form-element.submit {
     display: flex;
     width: 10rem;
@@ -865,3 +910,49 @@ textarea:focus {
 .main__contacts-address-info-value {
     font-size: 0.9rem;
 }
+
+.main__map {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.main__map-element {
+    width: 60.625rem;
+    height: 18.75rem;
+    overflow: hidden;
+}
+
+.main__map-element img {
+    width: 62.625rem;
+    height: 20.75rem;
+    transition: transform 0.4s ease;
+}
+
+.main__map-element:hover img {
+    transform: scale(1.2); 
+    transform-origin: center; 
+    cursor: pointer;
+}
+
+.main__brands {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__brands-element img {
+    width: 8.75rem;
+    height: 8.75rem;
+}
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.75rem;
+    background-color: #FAFAFA;
+}
+
+
+
