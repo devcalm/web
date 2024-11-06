@@ -42,6 +42,8 @@ section {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 0.5rem;
+    padding: 0 3rem;
 }
 
 .main-header__logo {
@@ -101,6 +103,7 @@ ul {
     flex-direction: column;
     position: absolute;
     width: 100%;
+    font-size: 0.8rem;
 }
 
 .main-nav-item__submenu li {
@@ -131,8 +134,11 @@ ul {
     border-bottom: 1px solid #ddd;
 }
 
+#main-seach__form {
+    flex-grow: 2;
+}
+
 .main-search__wrapper {
-    width: max-content;
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -142,7 +148,7 @@ ul {
 }
 
 .main-search__wrapper:focus-within {
-   box-shadow: 0 0 2px rgb(0, 0, 0, 0.75);
+    box-shadow: 0 0 2px rgb(0, 0, 0, 0.75);
 }
 
 .main-search__input {
@@ -151,10 +157,56 @@ ul {
     outline: none;
     border: none;
     background: transparent;
-    width: 18rem;
     padding-left: 0.5rem;
 }
+
 .main-search__input::placeholder,
 .main-search__icon {
     color: rgb(0, 0, 0, 0.5);
 }
+
+.main-header__controlls {
+    display: flex;
+}
+
+.main-header__search {
+    display: none;
+}
+
+.main-banner {
+    background-color: #F2F0F1;
+}
+
+.main-banner__content {
+    display: flex;
+}
+
+.main-banner__right-side {
+    width: 100%;
+}
+
+.main-banner__picture {
+    position: relative;
+    background: url("images/main-banner.png") center / cover no-repeat;
+    width: 100%;
+    min-width: 24.375rem;
+    height: 41rem;
+}
+
+.main-banner__stars {
+    position: absolute;
+    
+}
+
+.main-banner__small-star {
+    top: 18rem;
+    left: 1.5rem;
+    width: 10%;
+}
+
+.main-banner__big-star {
+    top: 8%;
+    right: 8%;
+    width: 20%;
+}
+
