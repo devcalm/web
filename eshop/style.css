@@ -76,7 +76,7 @@ body,
     margin-left: 8px;
 }
 
-a.hasDropdown:hover {
+.navbar .menu li:hover a.hasDropdown {
     color: #fff;
 }
 
@@ -213,18 +213,15 @@ li:hover a.hasDropdown:after {
     display: flex;
     max-width: 90rem;
     margin: 0 auto;
-}
-
-.main-banner__text {
-    padding-top: 3.25rem;
-}
-
-.main-banner__right-side {
     width: 100%;
 }
 
+.main-banner__text {
+    width: 50%;
+}
+
 .main-banner__picture-wrapper {
-    width: 78rem;
+    width: 50%;
     height: 57.5rem;
 }
 
@@ -371,8 +368,14 @@ li:hover a.hasDropdown:after {
         padding: 0 1rem;
     }
 
+    .main-banner__number {
+        font-size: 24px;
+    }
+
     .main-banner__text {
         padding-top: 2.5rem;
+        font-size: 14px;
+        width: 100%;
     }
 
     .main-banner__h1>h1 {
@@ -390,11 +393,13 @@ li:hover a.hasDropdown:after {
     .main-banner__numbers {
         margin-top: 1.25rem;
         flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
     }
 
     .main-banner__amount {
-        flex-grow: 1;
-        flex-basis: 180px;
+        /* flex-grow: 1; */
+        flex-basis: 160px;
     }
 }
 
