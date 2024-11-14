@@ -281,6 +281,21 @@ li:hover a.hasDropdown:after {
     font-size: 2.5rem;
 }
 
+.main-banner__footer {
+    background-color: #000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 7.625rem;
+}
+
+.main-banner__footer img {
+    padding: 2.75rem 0;
+   
+}
+
+
 @media only screen and (max-width: 768px) {
 
     .main-header {
@@ -424,6 +439,11 @@ li:hover a.hasDropdown:after {
         align-items: center;
         padding: 0;
         border: none;
+    }
+
+    .main-banner__picture-wrapper {
+        width: 100%;
+        padding: 2rem 0 0 0;
     }
 }
 
