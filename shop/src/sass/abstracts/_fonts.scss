@@ -1,0 +1,29 @@
+$font-sizes: (
+  small: (
+    300: 0.625rem,
+    400: 0.75rem,
+    500: 0.875rem,
+    600: 1rem,
+    700: 1.25rem,
+    750: 1.5rem,
+    800: 2rem,
+    900: 3rem,
+  ),
+  big: (
+    300: 0.75rem,
+    400: 0.875rem,
+    500: 1rem,
+    600: 1.5rem,
+    700: 2rem,
+    750: 2.5rem,
+    800: 3rem,
+    900: 4rem
+  )
+);
+
+$font-weight: (
+    regular: 400,
+    semi-bold: 500,
+    bold: 700,
+    extra-bold: 900 
+);

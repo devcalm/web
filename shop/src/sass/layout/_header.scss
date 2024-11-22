@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    --fs-logo: var(--fs-700);
+
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-extra-bold);
+  }
+}
