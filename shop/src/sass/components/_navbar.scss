@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .navbar {
   color: var(--clr-dark-100);
   border-radius: 4px;
@@ -8,21 +10,37 @@
 
     li {
       display: flex;
-      transition: background-color .5s ease;
+      transition: background-color 0.5s ease;
       text-align: center;
 
       &:hover {
         background: var(--clr-dark-200);
-        a.hasDropdown {
+        a {
           color: var(--clr-neutral-100);
         }
         a.hasDropdown:after {
           content: "";
           border-top-color: var(--clr-dark-200);
         }
-
         .navbar-container {
           display: flex;
+        }
+      }
+
+      @include mq(medium) {
+        position: relative;
+        flex-direction: column;
+        transition: initial;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--clr-secondary-400);
+        }
+        &:hover {
+          background: initial;
+        }
+        &.is-selected {
+          position: relative;
+          background: var(--clr-dark-200);
         }
       }
     }
@@ -38,8 +56,13 @@
 
       & > .fa {
         font-weight: var(--fw-bold);
-        margin-left: 8px;
+        padding: 4px 0 0 4px;
       }
+    }
+
+    @include mq(medium) {
+      flex-direction: column;
+      background: var(--clr-neutral-100);
     }
   }
 
@@ -61,6 +84,17 @@
           border-right: solid 1px var(--clr-secondary-500);
         }
       }
+    }
+
+    @include mq(medium) {
+      padding-top: 0;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-height: 0;
+      margin-bottom: 0;
+      transition: all 0.3s ease;
     }
   }
 
@@ -91,5 +125,26 @@
     transform: translateX(-50%);
     border: 8px solid transparent;
     border-top-color: var(--clr-dark-200);
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+
+  @include mq(medium) {
+    position: absolute;
+    transition: left 0.3s ease-in;
+    top: -100%;
+    border-radius: 0;
+    will-change: left;
+
+    &--is-visible {
+      left: 0;
+      top: 4rem;
+    }
+
+    .container--is-visible {
+      max-height: 1000px !important;
+    }
   }
 }

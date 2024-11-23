@@ -2,28 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="dist/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+	<title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">SHOP.CO</div>
-                <nav class="navbar js-navbar">
+	<header>
+		<div class="container">
+			<div class="header-wrapper">
+				<div id="nav-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="logo">SHOP.CO</div>
+				<nav class="navbar">
 					<ul class="nav-list">
 						<li>
 							<a class="hasDropdown" href="#">Male <i class="fa fa-angle-down"></i></a>
 							<ul class="navbar-container has-multi">
-                                <div class="navbar-container__list navbar-container__list-multi">
+								<div class="navbar-container__list navbar-container__list-multi">
 									<div class="navbar-container__list-item">
 										<div>Clothes</div>
 									</div>
@@ -201,19 +208,77 @@
 						</li>
 					</ul>
 				</nav>
-                <div class="search-form__wrapper">
-                    <form action="#" id="search-form">
-                        <div class="wrapper">
-                            <div class="material-symbols-outlined">search</div>
-                            <input type="search" placeholder="Search for products">
-                        </div>
-                    </form>
-                </div>
-                <img src="images/icons/icon-card.svg" alt="Card">
-                <img src="images/icons/icon-account.svg" alt="Account">
-            </div>
-        </div>
-    </header>
+
+				<form action="#" id="search-form">
+					<div class="wrapper">
+						<div class="icon material-symbols-outlined">search</div>
+						<input type="search" placeholder="Search for products">
+					</div>
+				</form>
+
+				<div class="controlls">
+					<a href="#"><img src="images/icons/icon-card.svg" alt="Card"></a>
+					<a href="#"><img src="images/icons/icon-account.svg" alt="Account"></a>  
+				</div>
+			</div>
+		</div>
+	</header>
+	<script type="text/javascript">
+
+
+		document.addEventListener("DOMContentLoaded", function () {
+			// Toggle menu icon and navbar visibility
+
+			document.querySelector("#nav-toggle").addEventListener("click", function () {
+				this.classList.toggle('active');
+
+				document.querySelectorAll(".nav-list .navbar-container").forEach(container => {
+					container.classList.remove("container--is-visible");
+				});
+
+				document.querySelectorAll(".nav-list li").forEach(item => {
+					item.classList.remove("is-selected");
+				});
+
+				document.querySelector(".navbar").classList.toggle("navbar--is-visible");
+			});
+
+
+
+		// 	// Handle menu item click
+		// 	document.querySelectorAll(".nav-list li").forEach(item => {
+		// 		item.addEventListener("click", function (e) {
+		// 			e.preventDefault();
+
+		// 			const currentContainer = this.querySelector(".navbar-container");
+
+		// 			if (currentContainer) {
+		// 				const isSelected = this.classList.toggle("is-selected");
+
+		// 				currentContainer.classList.toggle("container--is-visible");
+
+		// 				// Close other containers and deselect other menu items
+		// 				document.querySelectorAll(".nav-list .navbar-container").forEach(container => {
+		// 					if (container !== currentContainer) {
+		// 						container.classList.remove("container--is-visible");
+		// 					}
+		// 				});
+
+		// 				document.querySelectorAll(".nav-list li").forEach(otherItem => {
+		// 					if (otherItem !== this) {
+		// 						otherItem.classList.remove("is-selected");
+		// 					}
+		// 				});
+		// 			}
+		// 		});
+		// 	});
+
+
+
+		});
+
+
+	</script>
 </body>
 
 </html>

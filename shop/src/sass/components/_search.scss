@@ -1,0 +1,30 @@
+
+#search-form {
+  flex-grow: 1;  
+  max-width: 36rem;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #f6f6f6;
+    transition: box-shadow 0.25s;
+
+    &:focus-within {
+      box-shadow: 0 0 2px hsla(0, 0, 0, 0.75);
+    }
+
+    input {
+      font-family: "Lexend", sans-serif;
+      color: var(--clr-dark-300);
+      outline: none;
+      border: none;
+      background: transparent;
+      padding-left: 0.5rem;
+    }
+
+    .icon {
+      color: hsla(0, 0, 0, 0.5);
+    }
+  }
+}

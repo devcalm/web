@@ -4,11 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
 
   .logo {
     --fs-logo: var(--fs-700);
 
     font-size: var(--fs-logo);
     font-weight: var(--fw-extra-bold);
+  }
+
+  .controlls {
+    display: flex;
   }
 }
