@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.header-actions {
+    display: flex;
+    gap: var(--sz-450);
+    padding-left: 1rem;  
+    
+    .seach-icon {
+        display: none;
+        @include mq(small) {
+            display: block;
+        }
+    }
+  }

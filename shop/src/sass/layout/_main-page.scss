@@ -1,0 +1,129 @@
+@use "../abstracts/" as *;
+
+.main-page {
+  background: var(--clr-secondary-500);
+
+  .wrapper {
+    display: flex;
+
+    @include mq(small) {
+      flex-direction: column;
+    }
+  }
+
+  .main-description {
+    padding-top: 6.25rem;
+    width: 50%;
+
+    @include mq(small) {
+      padding-top: 2.5rem;
+      width: 100%;
+    }
+
+    &__shop-button {
+      cursor: pointer;
+      margin-top: 2rem;
+      background-color: #000;
+      color: #fff;
+      border-radius: 2rem;
+      width: 13.125rem;
+      height: 3.25rem;
+      font-size: 0.9rem;
+      text-align: center;
+
+      @include mq(small) {
+        margin-top: 1.438rem;
+        width: 100%;
+      }
+    }
+
+    &__numbers {
+      margin-top: 3rem;
+      display: flex;
+      max-width: 37.25rem;
+
+      @include mq(small) {
+        margin-top: 1.25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .number {
+        font-weight: var(--fw-semi-bold);
+        font-size: var(--fs-750);
+      }
+
+      .text {
+        @include mq(small) {
+          font-size: 0.75rem;
+        }
+      }
+
+      .amount.first {
+        padding-right: 1rem;
+        @include mq(small) {
+          padding-right: 0.7rem;
+        }
+      }
+      .amount.second {
+        padding: 0 1rem;
+        border-left: 1px solid hsla(0, 0%, 20%, 0.3);
+
+        @include mq(small) {
+          padding-right: 0;
+          padding-left: 0.7rem;
+          border-left: 1px solid hsla(0, 0%, 20%, 0.3);
+        }
+      }
+
+      .amount.third {
+        padding-left: 1rem;
+        border-left: 1px solid hsla(0, 0%, 20%, 0.3);
+
+        @include mq(small) {
+          padding: 0;
+          margin-top: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .main-description > h1 {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-extra-bold);
+    max-width: 36rem;
+  }
+
+  .main-description__text {
+    margin-top: 2rem;
+    max-width: 34rem;
+
+    @include mq(small) {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .main-banner {
+    padding-right: 3rem;
+    padding-top: 2rem;
+    width: 50%;
+    height: 57.5rem;
+
+    @include mq(small) {
+      width: 100%;
+    }
+  }
+
+  .main-banner__picture {
+    background-image: url("../../images/main-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    min-width: 24.375rem;
+  }
+}

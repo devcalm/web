@@ -216,13 +216,52 @@
 					</div>
 				</form>
 
-				<div class="controlls">
+				<div class="header-actions">
+					<a href="#" class="seach-icon"><img src="images/icons/icon-search.svg" alt="Search"></a>
 					<a href="#"><img src="images/icons/icon-card.svg" alt="Card"></a>
-					<a href="#"><img src="images/icons/icon-account.svg" alt="Account"></a>  
+					<a href="#"><img src="images/icons/icon-account.svg" alt="Account"></a>
 				</div>
 			</div>
 		</div>
 	</header>
+
+	<main>
+		<section class="main-page">
+			<div class="wrapper | container">
+				<div class="main-description">
+					<h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+					<p class="main-description__text">
+						Browse through our diverse range of meticulously crafted garments, designed to bring out
+						your individuality and cater to your sense of style.
+					</p>
+
+					<button class="main-description__shop-button">
+						Shop Now
+					</button>
+					
+					<div class="main-description__numbers">
+						<div class="amount first">
+							<div class="number">200+</div>
+							<div class="text | description">International Brands</div>
+						</div>
+						<div class="amount second">
+							<div class="number">2,000+</div>
+							<div class="text | description">High-Quality Products</div>
+						</div>
+						<div class="amount third">
+							<div class="number">30,000+</div>
+							<div class="text | description">Happy Customers</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="main-banner">
+					<div class="main-banner__picture"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
 	<script type="text/javascript">
 
 
@@ -245,33 +284,33 @@
 
 
 
-		// 	// Handle menu item click
-		// 	document.querySelectorAll(".nav-list li").forEach(item => {
-		// 		item.addEventListener("click", function (e) {
-		// 			e.preventDefault();
+			// Handle menu item click
+			document.querySelectorAll(".nav-list li").forEach(item => {
+				item.addEventListener("click", function (e) {
+					e.preventDefault();
 
-		// 			const currentContainer = this.querySelector(".navbar-container");
+					const currentContainer = this.querySelector(".navbar-container");
 
-		// 			if (currentContainer) {
-		// 				const isSelected = this.classList.toggle("is-selected");
+					if (currentContainer) {
+						const isSelected = this.classList.toggle("is-selected");
 
-		// 				currentContainer.classList.toggle("container--is-visible");
+						currentContainer.classList.toggle("container--is-visible");
 
-		// 				// Close other containers and deselect other menu items
-		// 				document.querySelectorAll(".nav-list .navbar-container").forEach(container => {
-		// 					if (container !== currentContainer) {
-		// 						container.classList.remove("container--is-visible");
-		// 					}
-		// 				});
+						// Close other containers and deselect other menu items
+						document.querySelectorAll(".nav-list .navbar-container").forEach(container => {
+							if (container !== currentContainer) {
+								container.classList.remove("container--is-visible");
+							}
+						});
 
-		// 				document.querySelectorAll(".nav-list li").forEach(otherItem => {
-		// 					if (otherItem !== this) {
-		// 						otherItem.classList.remove("is-selected");
-		// 					}
-		// 				});
-		// 			}
-		// 		});
-		// 	});
+						document.querySelectorAll(".nav-list li").forEach(otherItem => {
+							if (otherItem !== this) {
+								otherItem.classList.remove("is-selected");
+							}
+						});
+					}
+				});
+			});
 
 
 

@@ -11,9 +11,9 @@
 
     font-size: var(--fs-logo);
     font-weight: var(--fw-extra-bold);
-  }
 
-  .controlls {
-    display: flex;
+    @include mq(medium) {
+      padding-left: 1rem;    
+    }
   }
 }

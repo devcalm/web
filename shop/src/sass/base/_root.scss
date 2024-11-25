@@ -21,6 +21,20 @@
     }
   }
 
+  @each $screen-size, $property in $sizes {
+    @if $screen-size == big {
+      @each $prop, $value in $property {
+        --sz-#{$prop}: #{$value};
+      }
+    } @else {
+      @include mq(small) {
+        @each $prop, $value in $property {
+          --sz-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+
   @each $key, $value in $font-weight {
     --fw-#{$key}: #{$value};
   }
