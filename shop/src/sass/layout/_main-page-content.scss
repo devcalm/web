@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.main-page-content {
+  margin-top: 4.5rem;
+
+  @include mq(small) {
+    margin-top: 3.125rem;
+  }
+}
+
+.main-proposition {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-extra-bold);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.main-page-content__items {
+  margin-top: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mq(small) {
+    margin-top: 2rem;
+  }
+}

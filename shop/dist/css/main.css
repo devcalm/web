@@ -88,12 +88,15 @@ body {
   --clr-secondary-600: hsl(20, 10%, 94%);
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-accent-100: hsl(6, 65%, 60%);
+  --clr-accent-200: hsl(0, 100%, 60%);
+  --clr-accent-300: hsla(0, 100%, 60%, 0.1);
   --clr-dark-100: hsl(0, 0%, 0%);
   --clr-dark-200: hsl(233, 24%, 19%);
   --clr-dark-300: hsl(0, 0%, 20%);
   --fs-300: 0.75rem;
   --fs-400: 0.875rem;
   --fs-500: 1rem;
+  --fs-550: 1.25rem;
   --fs-600: 1.5rem;
   --fs-700: 2rem;
   --fs-750: 2.5rem;
@@ -111,9 +114,10 @@ body {
     --fs-300: 0.625rem;
     --fs-400: 0.75rem;
     --fs-500: 0.875rem;
-    --fs-600: 1rem;
-    --fs-700: 1.25rem;
-    --fs-750: 1.5rem;
+    --fs-550: 1rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-750: 2rem;
     --fs-800: 2rem;
     --fs-900: 2.25rem;
   }
@@ -347,6 +351,87 @@ body {
   }
 }
 
+.list-item__image-wrapper {
+  max-width: 18.438rem;
+  max-height: 18.438rem;
+  width: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 40em) {
+  .list-item__image-wrapper {
+    max-width: 9rem;
+    max-height: 9rem;
+  }
+}
+.list-item .item-name {
+  margin-top: 1rem;
+  font-size: var(--fs-550);
+  font-weight: var(--fw-bold);
+}
+@media only screen and (max-width: 40em) {
+  .list-item .item-name {
+    margin-top: 0.5rem;
+  }
+}
+.list-item .rating {
+  display: flex;
+  margin-top: 8px;
+}
+@media only screen and (max-width: 40em) {
+  .list-item .rating {
+    margin-top: 4px;
+  }
+}
+.list-item .stars {
+  display: flex;
+}
+.list-item .stars img {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+@media only screen and (max-width: 40em) {
+  .list-item .stars img {
+    width: 0.96rem;
+    height: 0.96rem;
+  }
+}
+.list-item .price {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media only screen and (max-width: 40em) {
+  .list-item .price {
+    margin-top: 4px;
+    gap: 5px;
+  }
+}
+.list-item .price .total {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+.list-item .price .discount-price {
+  text-decoration: line-through;
+  color: var(--clr-primary-500);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+.list-item .price .discount {
+  color: var(--clr-accent-200);
+  background: var(--clr-accent-300);
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px 10px;
+}
+.list-item .amount .of {
+  color: var(--clr-primary-700);
+}
+.list-item img:hover {
+  cursor: pointer;
+}
+
 .header-wrapper {
   display: flex;
   align-items: center;
@@ -539,5 +624,33 @@ body {
 /**
 versace w: 10.405
 */
+.main-page-content {
+  margin-top: 4.5rem;
+}
+@media only screen and (max-width: 40em) {
+  .main-page-content {
+    margin-top: 3.125rem;
+  }
+}
+
+.main-proposition {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-extra-bold);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.main-page-content__items {
+  margin-top: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 40em) {
+  .main-page-content__items {
+    margin-top: 2rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
