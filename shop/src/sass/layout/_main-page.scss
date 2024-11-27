@@ -23,8 +23,8 @@
     &__shop-button {
       cursor: pointer;
       margin-top: 2rem;
-      background-color: #000;
-      color: #fff;
+      background-color: var(--clr-dark-100);
+      color: var(--clr-neutral-100);
       border-radius: 2rem;
       width: 13.125rem;
       height: 3.25rem;
@@ -146,37 +146,34 @@
     }
 
     @include mq(medium) {
-      padding: 2.6rem 3rem;
+      padding: 2.5rem 3rem;
       justify-content:center
     }
 
     @include mq(small) {        
-      padding: 2.5rem 1rem;
+      padding: 2rem 0.8rem;
       justify-content:center
     }
   }
 
   img[data-brand="versace"] {
-    width: clamp(7.3rem, var(--responsive-width), 10.405rem);
+    width: clamp(4.6rem, var(--responsive-width), 10.405rem);
   }
 
   img[data-brand="zara"] {
-    width: clamp(4rem, var(--responsive-width), 5.75rem);
+    width: clamp(3rem, var(--responsive-width), 5.75rem);
   }
 
   img[data-brand="gucci"] {
-    width: clamp(6.85rem, var(--responsive-width), 9.75rem);
+    width: clamp(5.85rem, var(--responsive-width), 9.75rem);
   }
 
   img[data-brand="prada"] {
-    width: clamp(7.5rem, var(--responsive-width), 12.125rem);
+    width: clamp(6.5rem, var(--responsive-width), 12.125rem);
   }
 
   img[data-brand="calvin-klein"] {
-    width: clamp(8.5rem, var(--responsive-width), 12.875rem);
+    width: clamp(7.5rem, var(--responsive-width), 12.875rem);
   }
 }
 
-/**
-versace w: 10.405
-*/
