@@ -675,11 +675,11 @@ body {
   width: clamp(7.5rem, var(--responsive-width), 12.875rem);
 }
 
-.main-page-content {
+.main-page-products > .container {
   margin-top: 4.5rem;
 }
 @media only screen and (max-width: 40em) {
-  .main-page-content {
+  .main-page-products > .container {
     margin-top: 3.125rem;
   }
 }

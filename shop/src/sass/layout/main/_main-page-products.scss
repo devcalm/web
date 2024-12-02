@@ -1,6 +1,6 @@
-@use "../abstracts/" as *;
+@use "../../abstracts/" as *;
 
-.main-page-content {
+.main-page-products > .container {
   margin-top: 4.5rem;
 
   @include mq(small) {
